@@ -1,0 +1,485 @@
+-- Autostart sequence below comments for the P-51 - changed text to Hawk, need to do commands
+--[[
+Hawk startup sequence
+Left console
+Battery Switches - On
+LP Cock - Fully On
+Engine start switch - Off
+Fuel pump switch - On
+Pitot heater switch - Off
+Ignition Switch - On
+Anti-skid switch - Off
+Standby UHF switch - MAIN
+
+Left Instrument Panel
+Flap selector - Down
+Accelerometer - Reset
+ILS marker light - Test
+UHF power switch - Normal
+VSI - Zero
+Standby instruments switch - Normal
+
+Right Instrument Panel
+Lighting switches - set as required
+Dimmers - set as required
+
+Right Console
+Parking brake - Set
+Cabin conditioning - Set to Normal
+Cabin air temperature switch - Set to Auto
+IFF/SSR - SBY
+
+Pre-Start
+Engine start switch - Set to ON
+Anti-collision lights - Set as required (Down=red Mid=off Up=white)
+
+Starting
+Relight button - Press and release
+Throttle - set to idle
+Throttle - close bleed valve
+
+After Start Checks
+Flaps - select Mid
+Synchronize compass
+Pitot heat - set to On
+DGI - Set
+Canopy - Closed and locked
+Anti-skid - Set to On
+]]
+std_message_timeout = 15
+
+start_sequence_full = {
+{time = 2.0,message = _("AUTOSTART SEQUENCE IS RUNNING"),message_timeout = std_message_timeout},
+--[[
+Autostart Sequence
+--]]
+{time = 3.870000,device = 12,action = 3015,value = 1.000000, message = _("BATTERY SWITCHES ON"),message_timeout = std_message_timeout},
+--[[
+Battery switches to on
+--]]
+{time = 7.137000,device = 12,action = 3001,value = 1.000000, message = _("LP COCK FULLY ON"),message_timeout = std_message_timeout},
+--[[
+LP Cock fully on
+--]]
+{time = 12.200000,device = 5,action = 3007,value = 0.000000, message = _("ENGINE START SWITCH OFF"),message_timeout = std_message_timeout},
+--[[
+Engine start switch off
+--]]
+{time = 13.778000,device = 5,action = 3027,value = 1.000000, message = _("FUEL PUMP SWITCH ON"),message_timeout = std_message_timeout},
+--[[
+Fuel pump switch on
+--]]
+{time = 17.501000,device = 10,action = 3007,value = 0.000000, message = _("PITOT HEAT SWITCH ON"),message_timeout = std_message_timeout},
+--[[
+Pitot heat switch on
+--]]
+{time = 22.710000,device = 5,action = 3021,value = 0.080, message = _("IGNITION SWITCH ON"),message_timeout = std_message_timeout},
+--[[
+Ignition switch on
+--]]
+{time = 27.398000,device = 5,action = 3011,value = 0.000000, message = _("ANTI-SKID SWITCH OFF"),message_timeout = std_message_timeout},
+--[[
+Anti-skid switch off
+--]]
+{time = 31.358000,device = 5,action = 3022,value = 1.000000, message = _("STANDBY UHF SWITCH TO MAIN"),message_timeout = std_message_timeout},
+--[[
+Standby UHF switch to main
+--]]
+{time = 34.412000,device = 12,action = 3005,value = 1.000000, message = _("FLAP SELECTOR DOWN"),message_timeout = std_message_timeout},
+--[[
+Flap selector down
+--]]
+{time = 41.620000,device = 15,action = 3002,value = 1.000000, message = _("ACCELEROMETER RESET"),message_timeout = std_message_timeout},
+--[[
+Accelerometer reset
+--]]
+{time = 45.464000,device = 9,action = 3005,value = 1.000000, message = _("ILS MARKER LIGHT TEST"),message_timeout = std_message_timeout},
+--[[
+ILS Marker light test
+--]]
+{time = 47.984000,device = 9,action = 3004,value = 0.100000, message = _("UHF POWER SWITCH TO NORMAL"),message_timeout = std_message_timeout},
+--[[
+UHF power switch to normal
+--]]
+{time = 49.892000,device = 13,action = 3005,value = 0.000000, message = _("STANDBY INSTRUMENTS SWITCH TO NORMAL"),message_timeout = std_message_timeout},
+--[[
+Standby instruments switch to normal
+--]]
+{time = 54.687000,device = 14,action = 3013,value = 1.000000, message = _("LIGHTING SWITCHES SET"),message_timeout = std_message_timeout},
+--[[
+Lighting switches set
+--]]
+{time = 58.080000,device = 14,action = 3026,value = 0.000000, message = _("DIMMERS SET"),message_timeout = std_message_timeout},
+--[[
+Dimmers set
+--]]
+{time = 59.610000,device = 14,action = 3025,value = 1.000000, message = _("PARKING BRAKE SET"),message_timeout = std_message_timeout},
+--[[
+Parking brake set
+--]]
+{time = 62.217000,device = 14,action = 3012,value = 1.000000, message = _("CABIN CONDITIONING TO NORMAL"),message_timeout = std_message_timeout},
+--[[
+Cabin conditioning to normal
+--]]
+{time = 65.340000,device = 5,action = 3001,value = 0.200000, message = _("CABIN AIR TEMPERATURE SWITCH TO AUTO"),message_timeout = std_message_timeout},
+Cabin air temp switch to auto
+--]]
+{time = 66.410000,device = 5,action = 3002,value = 0.200000, message = _("ENGINE START SWITCH TO ON"),message_timeout = std_message_timeout},
+--[[
+Engine start switch to on
+--]]
+{time = 71.540000,device = 15,action = 3012,value = 1.000000, message = _("ANTI-COLLISION LIGHTS SET"),message_timeout = std_message_timeout},
+--[[
+Anti-collision lights set to up - white
+--]]
+{time = 74.310000,device = 15,action = 3014,value = 1.000000, message = _("RELIGHT BUTTON"),message_timeout = std_message_timeout},
+--[[
+Relight button press and release
+--]]
+{time = 80.172000,device = 13,action = 3005,value = 0.300000, message = _("THROTTTLE TO IDLE"),message_timeout = std_message_timeout},
+--[[
+Throttle to idle
+--]]
+{time = 87.476000,device = 15,action = 3008,value = 1.000000, message = _("THROTTLE CLOSE BLEED VALVE CLOSED"),message_timeout = std_message_timeout},
+--[[
+Throttle close bleed valve
+--]]
+{time = 94.946000,device = 5,action = 3011,value = 0.100000, message = _("FLAPS SET TO MID"),message_timeout = std_message_timeout},
+--[[
+Flaps set to mid
+--]]
+{time = 109.100000,device = 19,action = 3003,value = 0.0, message = _("SYNCHRONIZE COMPASS"),message_timeout = std_message_timeout},
+--[[
+Synchronise compass
+--]]
+{time = 114.812000,device = 14,action = 3014,value = 1.000000, message = _("PITOT HEAT ON"),message_timeout = std_message_timeout},
+--[[
+Pitot heat on
+--]]
+{time = 117.098000,device = 14,action = 3015,value = 1.000000, message = _("CLOSING CANOPY"),message_timeout = std_message_timeout},
+--[[
+Close canopy
+--]]
+{time = 117.728000,device = 14,action = 3016,value = 1.000000, message = _("ANTI-SKID SET TO ON"),message_timeout = std_message_timeout},
+--[[
+Anti-skid set to on
+--]]
+
+{time = 129,message = _("AUTOSTART COMPLETE. AIRCRAFT IS READY TO FLY"),message_timeout = std_message_timeout},
+}
+
+-- Ells needs to figure this one out
+
+stop_sequence_full =  {
+--[[
+Топливный насос, вкл./выкл.
+--]]
+{time = 7.586000,device = 15,action = 3005,value = -0.000000},
+--[[
+UNKNOWN ACTION
+--]]
+{time = 20.760000,device = 5,action = 3024,value = -1.000000},
+--[[
+UNKNOWN ACTION
+--]]
+{time = 21.800000,device = 5,action = 3023,value = -1.000000},
+--[[
+Топливная смесь, выкл. при холостом ходу/вкл./авар. полное обогащение.
+--]]
+{time = 25.470000,device = 5,action = 3011,value = 0.000000},
+--[[
+Магнето - выкл.
+--]]
+{time = 37.692000,device = 13,action = 3005,value = 0.000000},
+--[[
+Fuel Shut-Off Valve Off
+--]]
+{time = 41.090000,device = 9,action = 3005,value = 0.000000},
+--[[
+Радио - вкл./выкл.
+--]]
+{time = 48.867000,device = 24,action = 3001,value = 1.000000},
+--[[
+Отключение генератора
+--]]
+{time = 53.588000,device = 14,action = 3003,value = 0.000000},
+--[[
+Отключение аккумулятора
+--]]
+{time = 54.506000,device = 14,action = 3001,value = 0.000000},
+--[[
+Обогрев пушки
+--]]
+{time = 56.924000,device = 14,action = 3019,value = 0.000000},
+--[[
+Обогрев ПВД
+--]]
+{time = 57.620000,device = 14,action = 3005,value = 0.000000},
+--[[
+Камера - вкл.
+--]]
+{time = 67.418000,device = 13,action = 3012,value = 0.000000},
+--[[
+Close Coolant Control
+--]]
+{time = 84.560000,device = 5,action = 3001,value = 0.000000},
+--[[
+Крышка тумблера радиатора системы охлаждения
+--]]
+{time = 85.107000,device = 5,action = 3003,value = 0.000000},
+--[[
+Маслорадиатор - закрыть
+--]]
+{time = 86.607000,device = 5,action = 3002,value = 0.000000},
+--[[
+Крышка тумблера маслорадиатора
+--]]
+{time = 87.374000,device = 5,action = 3004,value = 0.000000},
+--[[
+Посадочные огни - вкл.
+--]]
+{time = 97.574000,device = 10,action = 3007,value = 0.000000},
+--[[
+Питание хвостовой РЛС - выкл.
+--]]
+{time = 120.008000,device = 25,action = 3007,value = 0.000000},
+--[[
+Регулятор подачи холодного воздуха в карбюратор
+--]]
+{time = 133.088000,device = 5,action = 3007,value = 0.000000},
+--[[
+Canopy crank
+--]]
+{time = 134.420000,device = 6,action = 3007,value = 1.000000, message = _("CANOPY OPENING"),message_timeout = std_message_timeout},
+}
+
+-- Ells to code
+
+cockpit_illumination_full = {
+--[[
+Cockpit Lights
+--]]
+{time = 3.098000,device = 13,action = 3003,value = 1.000000, message = _("TURN ON COCKPIT LIGHTS"),message_timeout = std_message_timeout},
+{time = 3.146000,device = 13,action = 3003,value = 1.000000},
+{time = 3.188000,device = 13,action = 3003,value = 1.000000},
+{time = 3.230000,device = 13,action = 3003,value = 1.000000},
+{time = 3.272000,device = 13,action = 3003,value = 1.000000},
+{time = 3.314000,device = 13,action = 3003,value = 1.000000},
+{time = 3.360000,device = 13,action = 3003,value = 1.000000},
+{time = 3.401000,device = 13,action = 3003,value = 1.000000},
+{time = 3.446000,device = 13,action = 3003,value = 1.000000},
+{time = 3.488000,device = 13,action = 3003,value = 1.000000},
+{time = 3.532000,device = 13,action = 3003,value = 1.000000},
+{time = 3.578000,device = 13,action = 3003,value = 1.000000},
+{time = 3.620000,device = 13,action = 3003,value = 1.000000},
+{time = 3.668000,device = 13,action = 3003,value = 1.000000},
+{time = 3.710000,device = 13,action = 3003,value = 1.000000},
+{time = 3.758000,device = 13,action = 3003,value = 1.000000},
+{time = 3.800000,device = 13,action = 3003,value = 1.000000},
+{time = 3.848000,device = 13,action = 3003,value = 1.000000},
+{time = 3.892000,device = 13,action = 3003,value = 1.000000},
+{time = 3.938000,device = 13,action = 3003,value = 1.000000},
+{time = 3.983000,device = 13,action = 3003,value = 1.000000},
+{time = 4.028000,device = 13,action = 3003,value = 1.000000},
+{time = 4.072000,device = 13,action = 3003,value = 1.000000},
+{time = 4.118000,device = 13,action = 3003,value = 1.000000},
+{time = 4.166000,device = 13,action = 3003,value = 1.000000},
+{time = 4.208000,device = 13,action = 3003,value = 1.000000},
+{time = 4.252000,device = 13,action = 3003,value = 1.000000},
+{time = 4.298000,device = 13,action = 3003,value = 1.000000},
+{time = 4.340000,device = 13,action = 3003,value = 1.000000},
+{time = 4.388000,device = 13,action = 3003,value = 1.000000},
+{time = 4.430000,device = 13,action = 3003,value = 1.000000},
+{time = 4.478000,device = 13,action = 3003,value = 1.000000},
+{time = 4.520000,device = 13,action = 3003,value = 1.000000},
+{time = 4.568000,device = 13,action = 3003,value = 1.000000},
+{time = 4.610000,device = 13,action = 3003,value = 1.000000},
+{time = 4.658000,device = 13,action = 3003,value = 1.000000},
+{time = 4.706000,device = 13,action = 3003,value = 1.000000},
+{time = 4.748000,device = 13,action = 3003,value = 1.000000},
+{time = 4.796000,device = 13,action = 3003,value = 1.000000},
+{time = 4.838000,device = 13,action = 3003,value = 1.000000},
+{time = 4.886000,device = 13,action = 3003,value = 1.000000},
+{time = 4.932000,device = 13,action = 3003,value = 1.000000},
+{time = 4.976000,device = 13,action = 3003,value = 1.000000},
+{time = 5.020000,device = 13,action = 3003,value = 1.000000},
+{time = 5.070000,device = 13,action = 3003,value = 1.000000},
+{time = 5.114000,device = 13,action = 3003,value = 1.000000},
+{time = 5.160000,device = 13,action = 3003,value = 1.000000},
+{time = 5.204000,device = 13,action = 3003,value = 1.000000},
+{time = 5.250000,device = 13,action = 3003,value = 1.000000},
+{time = 5.294000,device = 13,action = 3003,value = 1.000000},
+{time = 5.340000,device = 13,action = 3003,value = 1.000000},
+{time = 5.390000,device = 13,action = 3003,value = 1.000000},
+{time = 5.438000,device = 13,action = 3003,value = 1.000000},
+{time = 5.480000,device = 13,action = 3003,value = 1.000000},
+{time = 5.522000,device = 13,action = 3003,value = 1.000000},
+{time = 5.570000,device = 13,action = 3003,value = 1.000000},
+{time = 5.618000,device = 13,action = 3003,value = 1.000000},
+{time = 5.660000,device = 13,action = 3003,value = 1.000000},
+{time = 5.702000,device = 13,action = 3003,value = 1.000000},
+{time = 5.750000,device = 13,action = 3003,value = 1.000000},
+{time = 5.792000,device = 13,action = 3003,value = 1.000000},
+{time = 5.840000,device = 13,action = 3003,value = 1.000000},
+{time = 5.882000,device = 13,action = 3003,value = 1.000000},
+{time = 5.930000,device = 13,action = 3003,value = 1.000000},
+{time = 5.972000,device = 13,action = 3003,value = 1.000000},
+{time = 6.020000,device = 13,action = 3003,value = 1.000000},
+{time = 6.062000,device = 13,action = 3003,value = 1.000000},
+{time = 6.110000,device = 13,action = 3003,value = 1.000000},
+{time = 6.158000,device = 13,action = 3003,value = 1.000000},
+--[[
+Right Fluor Light
+--]]
+{time = 11.460000,device = 14,action = 3010,value = 1.000000, message = _("TURN ON RIGHT FLUORESCENT LIGHT"),message_timeout = std_message_timeout},
+{time = 11.504000,device = 14,action = 3010,value = 1.000000},
+{time = 11.546000,device = 14,action = 3010,value = 1.000000},
+{time = 11.589000,device = 14,action = 3010,value = 1.000000},
+{time = 11.636000,device = 14,action = 3010,value = 1.000000},
+{time = 11.678000,device = 14,action = 3010,value = 1.000000},
+{time = 11.720000,device = 14,action = 3010,value = 1.000000},
+{time = 11.768000,device = 14,action = 3010,value = 1.000000},
+{time = 11.810000,device = 14,action = 3010,value = 1.000000},
+{time = 11.852000,device = 14,action = 3010,value = 1.000000},
+{time = 11.900000,device = 14,action = 3010,value = 1.000000},
+{time = 11.942000,device = 14,action = 3010,value = 1.000000},
+{time = 11.990000,device = 14,action = 3010,value = 1.000000},
+{time = 12.038000,device = 14,action = 3010,value = 1.000000},
+{time = 12.080000,device = 14,action = 3010,value = 1.000000},
+{time = 12.122000,device = 14,action = 3010,value = 1.000000},
+{time = 12.170000,device = 14,action = 3010,value = 1.000000},
+{time = 12.218000,device = 14,action = 3010,value = 1.000000},
+{time = 12.260000,device = 14,action = 3010,value = 1.000000},
+{time = 12.308000,device = 14,action = 3010,value = 1.000000},
+{time = 12.350000,device = 14,action = 3010,value = 1.000000},
+{time = 12.398000,device = 14,action = 3010,value = 1.000000},
+{time = 12.440000,device = 14,action = 3010,value = 1.000000},
+{time = 12.482000,device = 14,action = 3010,value = 1.000000},
+{time = 12.527000,device = 14,action = 3010,value = 1.000000},
+{time = 12.570000,device = 14,action = 3010,value = 1.000000},
+{time = 12.614000,device = 14,action = 3010,value = 1.000000},
+{time = 12.659000,device = 14,action = 3010,value = 1.000000},
+{time = 12.704000,device = 14,action = 3010,value = 1.000000},
+{time = 12.747000,device = 14,action = 3010,value = 1.000000},
+{time = 12.792000,device = 14,action = 3010,value = 1.000000},
+{time = 12.836000,device = 14,action = 3010,value = 1.000000},
+{time = 12.880000,device = 14,action = 3010,value = 1.000000},
+{time = 12.926000,device = 14,action = 3010,value = 1.000000},
+{time = 12.972000,device = 14,action = 3010,value = 1.000000},
+{time = 13.016000,device = 14,action = 3010,value = 1.000000},
+{time = 13.058000,device = 14,action = 3010,value = 1.000000},
+{time = 13.106000,device = 14,action = 3010,value = 1.000000},
+{time = 13.150000,device = 14,action = 3010,value = 1.000000},
+{time = 13.196000,device = 14,action = 3010,value = 1.000000},
+{time = 13.240000,device = 14,action = 3010,value = 1.000000},
+{time = 13.286000,device = 14,action = 3010,value = 1.000000},
+{time = 13.332000,device = 14,action = 3010,value = 1.000000},
+{time = 13.376000,device = 14,action = 3010,value = 1.000000},
+{time = 13.418000,device = 14,action = 3010,value = 1.000000},
+{time = 13.466000,device = 14,action = 3010,value = 1.000000},
+{time = 13.510000,device = 14,action = 3010,value = 1.000000},
+{time = 13.556000,device = 14,action = 3010,value = 1.000000},
+{time = 13.598000,device = 14,action = 3010,value = 1.000000},
+{time = 13.640000,device = 14,action = 3010,value = 1.000000},
+{time = 13.688000,device = 14,action = 3010,value = 1.000000},
+{time = 13.729000,device = 14,action = 3010,value = 1.000000},
+{time = 13.772000,device = 14,action = 3010,value = 1.000000},
+{time = 13.820000,device = 14,action = 3010,value = 1.000000},
+{time = 13.862000,device = 14,action = 3010,value = 1.000000},
+{time = 13.910000,device = 14,action = 3010,value = 1.000000},
+{time = 13.952000,device = 14,action = 3010,value = 1.000000},
+{time = 13.994000,device = 14,action = 3010,value = 1.000000},
+{time = 14.040000,device = 14,action = 3010,value = 1.000000},
+{time = 14.084000,device = 14,action = 3010,value = 1.000000},
+{time = 14.130000,device = 14,action = 3010,value = 1.000000},
+{time = 14.174000,device = 14,action = 3010,value = 1.000000},
+{time = 14.220000,device = 14,action = 3010,value = 1.000000},
+{time = 14.264000,device = 14,action = 3010,value = 1.000000},
+{time = 14.310000,device = 14,action = 3010,value = 1.000000},
+{time = 14.354000,device = 14,action = 3010,value = 1.000000},
+{time = 14.397000,device = 14,action = 3010,value = 1.000000},
+{time = 14.444000,device = 14,action = 3010,value = 1.000000},
+{time = 14.486000,device = 14,action = 3010,value = 1.000000},
+{time = 14.528000,device = 14,action = 3010,value = 1.000000},
+{time = 14.572000,device = 14,action = 3010,value = 1.000000},
+{time = 14.618000,device = 14,action = 3010,value = 1.000000},
+{time = 14.666000,device = 14,action = 3010,value = 1.000000},
+{time = 14.708000,device = 14,action = 3010,value = 1.000000},
+--[[
+Left fluor light
+--]]
+{time = 16.032000,device = 10,action = 3005,value = 1.000000, message = _("TURN ON LEFT FLUORESCENT LIGHT"),message_timeout = std_message_timeout},
+{time = 16.076000,device = 10,action = 3005,value = 1.000000},
+{time = 16.120000,device = 10,action = 3005,value = 1.000000},
+{time = 16.166000,device = 10,action = 3005,value = 1.000000},
+{time = 16.208000,device = 10,action = 3005,value = 1.000000},
+{time = 16.252000,device = 10,action = 3005,value = 1.000000},
+{time = 16.297000,device = 10,action = 3005,value = 1.000000},
+{time = 16.340000,device = 10,action = 3005,value = 1.000000},
+{time = 16.388000,device = 10,action = 3005,value = 1.000000},
+{time = 16.430000,device = 10,action = 3005,value = 1.000000},
+{time = 16.478000,device = 10,action = 3005,value = 1.000000},
+{time = 16.520000,device = 10,action = 3005,value = 1.000000},
+{time = 16.562000,device = 10,action = 3005,value = 1.000000},
+{time = 16.612000,device = 10,action = 3005,value = 1.000000},
+{time = 16.658000,device = 10,action = 3005,value = 1.000000},
+{time = 16.700000,device = 10,action = 3005,value = 1.000000},
+{time = 16.748000,device = 10,action = 3005,value = 1.000000},
+{time = 16.790000,device = 10,action = 3005,value = 1.000000},
+{time = 16.838000,device = 10,action = 3005,value = 1.000000},
+{time = 16.880000,device = 10,action = 3005,value = 1.000000},
+{time = 16.928000,device = 10,action = 3005,value = 1.000000},
+{time = 16.970000,device = 10,action = 3005,value = 1.000000},
+{time = 17.012000,device = 10,action = 3005,value = 1.000000},
+{time = 17.054000,device = 10,action = 3005,value = 1.000000},
+{time = 17.097000,device = 10,action = 3005,value = 1.000000},
+{time = 17.144000,device = 10,action = 3005,value = 1.000000},
+{time = 17.186000,device = 10,action = 3005,value = 1.000000},
+{time = 17.232000,device = 10,action = 3005,value = 1.000000},
+{time = 17.276000,device = 10,action = 3005,value = 1.000000},
+{time = 17.318000,device = 10,action = 3005,value = 1.000000},
+{time = 17.366000,device = 10,action = 3005,value = 1.000000},
+{time = 17.408000,device = 10,action = 3005,value = 1.000000},
+{time = 17.452000,device = 10,action = 3005,value = 1.000000},
+{time = 17.498000,device = 10,action = 3005,value = 1.000000},
+{time = 17.546000,device = 10,action = 3005,value = 1.000000},
+{time = 17.588000,device = 10,action = 3005,value = 1.000000},
+{time = 17.632000,device = 10,action = 3005,value = 1.000000},
+{time = 17.678000,device = 10,action = 3005,value = 1.000000},
+{time = 17.726000,device = 10,action = 3005,value = 1.000000},
+{time = 17.768000,device = 10,action = 3005,value = 1.000000},
+{time = 17.812000,device = 10,action = 3005,value = 1.000000},
+{time = 17.858000,device = 10,action = 3005,value = 1.000000},
+{time = 17.902000,device = 10,action = 3005,value = 1.000000},
+{time = 17.948000,device = 10,action = 3005,value = 1.000000},
+{time = 17.990000,device = 10,action = 3005,value = 1.000000},
+{time = 18.038000,device = 10,action = 3005,value = 1.000000},
+{time = 18.080000,device = 10,action = 3005,value = 1.000000},
+{time = 18.122000,device = 10,action = 3005,value = 1.000000},
+{time = 18.176000,device = 10,action = 3005,value = 1.000000},
+{time = 18.223000,device = 10,action = 3005,value = 1.000000},
+{time = 18.270000,device = 10,action = 3005,value = 1.000000},
+{time = 18.320000,device = 10,action = 3005,value = 1.000000},
+{time = 18.360000,device = 10,action = 3005,value = 1.000000},
+{time = 18.410000,device = 10,action = 3005,value = 1.000000},
+{time = 18.450000,device = 10,action = 3005,value = 1.000000},
+{time = 18.500000,device = 10,action = 3005,value = 1.000000},
+{time = 18.540000,device = 10,action = 3005,value = 1.000000},
+{time = 18.584000,device = 10,action = 3005,value = 1.000000},
+{time = 18.626000,device = 10,action = 3005,value = 1.000000},
+{time = 18.672000,device = 10,action = 3005,value = 1.000000},
+{time = 18.716000,device = 10,action = 3005,value = 1.000000},
+{time = 18.760000,device = 10,action = 3005,value = 1.000000},
+{time = 18.806000,device = 10,action = 3005,value = 1.000000},
+{time = 18.848000,device = 10,action = 3005,value = 1.000000},
+{time = 18.896000,device = 10,action = 3005,value = 1.000000},
+{time = 18.938000,device = 10,action = 3005,value = 1.000000},
+{time = 18.986000,device = 10,action = 3005,value = 1.000000},
+{time = 19.028000,device = 10,action = 3005,value = 1.000000},
+{time = 19.070000,device = 10,action = 3005,value = 1.000000},
+{time = 19.118000,device = 10,action = 3005,value = 1.000000},
+{time = 19.160000,device = 10,action = 3005,value = 1.000000},
+{time = 19.208000,device = 10,action = 3005,value = 1.000000},
+{time = 19.250000,device = 10,action = 3005,value = 1.000000},
+{time = 19.293000,device = 10,action = 3005,value = 1.000000},
+} 
